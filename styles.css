@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap');
+
+/*Aling-Items = sirve para alinear elementos en vertical (entre arriba y abajo) = https://www.youtube.com/watch?v=_k-K1P1cO7g*/
+/*Justify-Content = se enfoca en lo horizontal (entre izquierda y derecha)*/
+
+*{
+    /*Quitamos valores por defecto*/
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background: #2c2c2c;
+}
+
+a,li{
+    font-family: 'Dosis'; /*La fuente que importamos de Google Fonts*/
+    color: white;
+    font-weight: bold;
+}
+
+.logo_header img{
+    width: 50px; /*Encogemos el logo*/
+}
+
+header{
+    background-color: #222;
+    display: flex; /*Para que se coloque uno al lado del otro*/
+    justify-content: space-between; /*Los elementos dentro se separan lo máximo posible*/
+    align-items: center;
+    padding: .5rem 2rem;
+}
+
+.nav-menu ul{
+    display: flex; /*Para que se coloque uno al lado del otro*/
+    align-items: center;
+}
+
+.nav-menu li{
+    margin-left: 1.5rem; /*Espacio entre los links*/
+}
+
+.nav-menu a:hover{
+    color: #4ad295;
+}
+
+.nav-menu li:last-child{
+    background-color: #4ad295;
+    border: 2px solid #4ad295;
+    padding: .25rem .75rem;
+    border-radius: .2rem;
+}
+
+.nav-menu li:last-child:hover{
+    background: transparent; /*quita su color y se ve el del header*/
+    border: 2px solid #4ad295;
+}
+
+.menu-icon img{
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+    background-color: white;
+}
+
+.menu-icon, #check{
+    display: none;
+}
