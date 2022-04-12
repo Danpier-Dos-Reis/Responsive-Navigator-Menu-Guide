@@ -112,5 +112,6 @@ header{
     este caso se refiere a todos los elementos dentro de un "ul"*/
     #check:checked ~ ul{
         left: 0; /*Hacemos visualizar el menu*/
+        transition: .35s;
     }
 }
