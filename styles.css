@@ -68,3 +68,49 @@ header{
 .menu-icon, #check{
     display: none;
 }
+
+                /*o 40em*/
+@media (max-width:768px){
+    .checkbtn{
+        display: block;
+    }
+
+    .menu-icon{
+        display: block;
+        position: fixed; /*Permite que un elemento se sobreponga por encima del otro, porque su posición es fija*/
+        top: 20px; /*su distancia en relación al top, no es un margen*/
+        right: 20px; /*su distancia en relación al lado derecho de la pantalla*/
+    }
+
+    .nav-menu ul{
+        display: block;
+        position: fixed;
+        top: 60px;
+        left: 100%; /*queda oculto porque está fuera del 100% de la pantalla, es parecido a un margin-left*/
+        background: #222;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+    }
+
+    .nav-menu ul li{
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .nav-menu ul li:last-child{
+        background: none;
+        padding: 1rem;
+    }
+
+    /*Cada vez que el 'input' esté activo va a ejecutar los estilo, el input está en la misma posición
+    que el icono de menu hamburguesa, por lo que al presionar ese icono también presionamos el input.
+    
+    El símbolo " ~ " significa que está seleccionando todos los elementos dentro de un contenedor, en
+    este caso se refiere a todos los elementos dentro de un "ul"*/
+    #check:checked ~ ul{
+        left: 0; /*Hacemos visualizar el menu*/
+    }
+}
